@@ -1,0 +1,48 @@
+<mat-sidenav-container class="">
+
+    <mat-sidenav #drawer mode="over" position="end">
+        <div>
+            <div class="px-3 pt-3">
+                <h5 class="mb-0">Bienvenido</h5>
+                <!-- <span class="font-weight-light op-50">Ingresa y crea tu evento.</span> -->
+            </div>
+            <hr>
+            <mat-nav-list>
+                <a mat-list-item (click)="selected()" routerLinkActive="active-list-item" [routerLink]="link.url" *ngFor="let link of links" [routerLinkActiveOptions]="{ exact: true }">
+                {{ link.nombre }}
+              </a>
+            </mat-nav-list>
+        </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="row d-flex justify-content-center no-gutters">
+            <div class="col-lg-10">
+                <nav class="navbar navbar-expand-md navbar-light bg-white" [ngClass]="getRoute()">
+                    <a class="my-2 my-sm-3 my-lg-5" [routerLink]="['/']">
+                        <img src="assets/images/logoKhapac.svg" width="180px" alt="Khapac">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item" *ngFor="let link of links">
+                                <a class="nav-link ml-3" [routerLink]="link.url" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">{{ link.nombre }}</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-md-none">
+                        <button mat-icon-button color="primary" (click)="drawer.toggle()">
+                          <!-- <mat-icon>menu</mat-icon> -->
+                          <img src="assets/images/iconMenu.svg" alt="menú">
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <router-outlet></router-outlet>
+
+
+        <app-footer></app-footer>
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

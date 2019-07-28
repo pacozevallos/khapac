@@ -1,0 +1,78 @@
+<div>
+
+    <div class="row no-gutters">
+        <div class="col-lg-10 mx-auto">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb py-0 bg-white small font-weight-light">
+                    <li class="breadcrumb-item"><a [routerLink]="['/']">inicio</a></li>
+                    <li class="breadcrumb-item"><a [routerLink]="['/portafolio']">portafolio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{nombre}}</li>
+                </ol>
+            </nav>
+
+        </div>
+    </div>
+
+    <div *ngIf="imgPrincipal" class="w-100 v-100 coverPrincipal" [style.background-image]="'url('+ imgPrincipal +')'"></div>
+
+    <div class="row no-gutters">
+        <div class="col-lg-10 mx-auto">
+
+
+            <div class="row no-gutters p-3 p-sm-4 p-lg-5 d-flex justify-content-between text-white mb-2" [ngStyle]="{'background-color': color}" style="margin-top: -80px;">
+                <div class="col-12">
+                    <h1 class="font-weight-bold mb-3 mt-3">{{nombre}}</h1>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="mb-4 font-weight-light">{{subtitulo}}</h4>
+                    <p class="font-weight-light">{{descripcion}}</p>
+                </div>
+                <div class="col-md-4 d-flex flex-column">
+                    <div class="d-flex flex-column mb-4">
+                        <span class="" *ngFor="let categoria of categorias "><i class="far fa-check-circle mr-2 "></i>{{categoria}}</span>
+                    </div>
+                    <div class="mt-auto">
+                        <button class="botonProyectos mb-4">Cuéntanos tu proyecto</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row myGutters">
+                <div class="col-md-8">
+                    <div *ngIf="images?.length > 0" class="imgCover" [style.background-image]="'url('+ images[0] +')'"></div>
+                </div>
+                <div class="col-md-4">
+                    <div *ngIf="boxText" class="h-100 p-3 p-md-5 d-flex align-items-center" [ngStyle]="{'background-color': boxText.colorBack, 'color': boxText.colorText}">
+                        <p class="lead font-weight-light">{{boxText.texto}}</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div *ngIf="images?.length > 1" class="imgCover" [style.background-image]="'url('+ images[1] +')'"></div>
+                </div>
+                <div class="col-md-6">
+                    <div *ngIf="images?.length > 2" class="imgCover" [style.background-image]="'url('+ images[2] +')'"></div>
+                </div>
+                <div class="col-md-12">
+                    <div *ngIf="images?.length > 3" class="imgCover" [style.background-image]="'url('+ images[3] +')'"></div>
+                </div>
+                <div class="col-md-4">
+                    <div *ngIf="images?.length > 4" class="imgCover" [style.background-image]="'url('+ images[4] +')'"></div>
+                </div>
+                <div class="col-md-4">
+                    <div *ngIf="images?.length > 5" class="imgCover" [style.background-image]="'url('+ images[5] +')'"></div>
+                </div>
+                <div class="col-md-4">
+                    <div *ngIf="images?.length > 6" class="imgCover" [style.background-image]="'url('+ images[6] +')'"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+</div>

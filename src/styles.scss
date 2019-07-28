@@ -1,0 +1,179 @@
+$font-family-base: "nerislight";
+//colors
+$primary:#E81E44;
+$secondary: #F86600;
+$success: #29D76F;
+$info:#1EE8E8;
+$warning: #E8D41E;
+$danger:#d9453d;
+$light: #DEDEDE;
+$dark: #342936;
+$white: #fafafa;
+// Espacios
+$spacer: 1rem;
+$spacers: ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .75), 3: ($spacer * 1.3), 4: ($spacer * 2), 5: ($spacer * 3), 6: ($spacer * 5), 7: ($spacer * 7), 8: ($spacer * 10), 9: ($spacer * 14), 10: ($spacer * 20));
+//Bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap';
+//Angular Material
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+//Cambiar tipografía Angular Material
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config( $font-family: 'nerislight');
+@include mat-core($custom-typography);
+// Material icons
+.material-icons,
+.material-icons-outlined,
+.material-icons-two-tone,
+.material-icons-round,
+.material-icons-sharp {
+    vertical-align: middle;
+    margin-top: -0.18rem;
+}
+
+.active-list-item {
+    color: $primary !important;
+    /* Note: You could also use a custom theme */
+}
+
+.font-weight-bold {
+    font-family: 'nerissemibold';
+    // letter-spacing: 0.075rem;
+}
+
+.font-weight-normal {
+    font-family: 'nerislight';
+    // letter-spacing: 0.075rem;
+}
+
+.font-weight-light {
+    font-family: 'neristhin';
+    // letter-spacing: 0.075rem;
+}
+
+.op-75 {
+    opacity: 0.75;
+}
+
+.op-50 {
+    opacity: 0.5;
+}
+
+.op-25 {
+    opacity: 0.25;
+}
+
+// Small Gutters
+.row.small-gutters {
+    margin-right: -0px;
+    margin-left: -0px;
+    @include media-breakpoint-only(xs) {
+        margin-right: -8px;
+        margin-left: -8px;
+    }
+}
+
+.row.small-gutters>[class^="col-"],
+.row.small-gutters>[class*=" col-"] {
+    padding: 8px;
+    @include media-breakpoint-only(xs) {
+        padding: 6px;
+    }
+}
+
+.list-comma::before {
+    content: ',';
+}
+
+.list-comma:first-child::before {
+    content: '';
+}
+
+// .mbGutters {
+//     margin-bottom: 15px;
+// }
+// .myGutters {
+//     margin-right: -8px;
+//     margin-left: -8px;
+//     >.col,
+//     >[class*="col-"] {
+//         padding-right: 8px;
+//         padding-left: 8px;
+//     }
+// }
+.myGutters {
+    margin-right: -8px;
+    margin-left: -8px;
+    // margin-top: 8px;
+    // margin-bottom: 8px;
+    >.col,
+    >[class*="col-"] {
+        padding: 8px;
+    }
+}
+
+.boxProyecto {
+    margin-top: -100px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1000;
+    @include media-breakpoint-only(xs) {
+        margin-top: -20px;
+    }
+}
+
+.botonProyectos {
+    border: 1px $white solid;
+    background: none;
+    color: $white;
+    border-radius: 6px;
+    font-family: 'nerissemibold';
+    padding: 16px 38px 20px 38px;
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+    @include media-breakpoint-only(xs) {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+}
+
+.botonProyectos:hover {
+    background-color: $white;
+    color: $dark;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    margin: 0px 8px;
+    border-radius: 100%;
+    background-color: $primary;
+}
+
+.navbarFloat {
+    position: absolute;
+    // top: 10px;
+    z-index: 999;
+    background: none !important;
+    width: 100%;
+}
+
+.carousel-caption {
+    width: 100%;
+    left: 0;
+    margin-bottom: 80px;
+}
+
+.imgCover {
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+}
+
+.coverPrincipal {
+    background-size: cover;
+    background-position: center center;
+    height: 540px;
+    @include media-breakpoint-only(xs) {
+        height: 280px;
+    }
+}

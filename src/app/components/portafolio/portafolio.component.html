@@ -1,0 +1,68 @@
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center mb-7">
+        <div class="col-lg-10">
+
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb p-0 bg-white small font-weight-light">
+                    <li class="breadcrumb-item"><a [routerLink]="['/']">inicio</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">portafolio</li>
+                </ol>
+            </nav>
+
+
+
+
+
+            <h3 class="text-center font-weight-light op-50 mb-5">Marcas que trascienden en el tiempo.</h3>
+
+
+            <!-- <div gdGap="24px" gdColumns="repeat(auto-fill, minmax(240px, 1fr))">
+                <div *ngFor="let proyecto of proyectos | async" style="position: relative;">
+                    <div class="w-100 v-100" style="height: 240px; background-size: cover; background-position: center center" [style.background-image]="'url('+ proyecto.imgMiniatura +')'"></div>
+                    <div class="mt-2 mb-2">
+                        <h5 class="font-weight-bolder text-dark pb-0 mb-0"><span>[{{proyecto.orden}}]</span> {{ proyecto.nombre }}</h5>
+                        <span class="font-weight-light text-muted small d-sm-inline-block mr-1" *ngFor="let categoria of proyecto.categorias; let isLast=last">{{categoria}} {{isLast ? '' : ' /  '}}</span>
+                    </div>
+                    <a [routerLink]="[ '/portafolio', proyecto.id]" class="stretched-link"></a>
+                </div>
+            </div> -->
+
+
+
+            <div class="row small-gutters">
+                <div class="col-6 col-sm-4 col-md-4 col-lg-3 " *ngFor="let proyecto of proyectos | async " style="position: relative; ">
+                    <img src="{{ proyecto.imgMiniatura }} " alt="{{ proyecto.nombre }} " width=100%>
+                    <div class="mt-2 mb-2 ">
+                        <h5 class="font-weight-bolder text-dark pb-0 mb-0 ">{{ proyecto.nombre }}</h5>
+                        <span class="font-weight-light text-muted small d-sm-inline-block mr-1 " *ngFor="let categoria of proyecto.categorias; let isLast=last ">{{categoria}} {{isLast ? '' : ' /  '}}</span>
+                    </div>
+                    <a [routerLink]="[ '/portafolio', proyecto.id] " class="stretched-link "></a>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- <div class="d-block d-sm-none ">
+                <h4 class="d-sm-none text-center font-weight-light op-50 mb-2 ">Marcas que trascienden<br> en el tiempo.</h4>
+                <div class="row small-gutters ">
+                    <div class="col-6 col-sm-4 col-md-4 col-lg-3 " *ngFor="let proyecto of proyectos | async " style="position: relative; ">
+                        <img src="{{ proyecto.imagen }} " alt="{{ proyecto.nombre }} " width=100%>
+                        <div class="mt-1 ">
+                            <h6 class="font-weight-bolder text-dark mb-0 ">{{ proyecto.nombre }}</h6>
+                            <span class="d-block d-sm-none font-weight-light text-muted small " *ngFor="let categoria of proyecto.categorias | slice: 0:1 ">{{categoria}}</span>
+                        </div>
+                        <a [routerLink]="[ '/portafolio', proyecto.id] " class="stretched-link "></a>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+
+        </div>
+    </div>
+</div>

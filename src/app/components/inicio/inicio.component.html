@@ -1,0 +1,55 @@
+<div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active" *ngFor="let slide of slides; let isFirst = first" [class.active]="isFirst">
+                <img src="{{ slide.imagen }}" class="d-block w-100" alt="{{ slide.titulo }}">
+                <div class="container-fluid">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="carousel-caption d-none d-md-block text-left text-dark">
+                                <span class="">{{ slide.categoria }}</span>
+                                <h2 class="mb-4 font-weight-light">{{ slide.titulo }}</h2>
+                                <button class="btn btn-outline-primary px-4 py-3">{{ slide.button }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a> -->
+    </div>
+</div>
+
+
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-10">
+            <div class="d-flex justify-content-between my-6">
+                <h3 class="font-weight-light op-75 d-flex align-items-center">Contruyendo marcas sólidas que trascienden en el tiempo</h3>
+                <button class="btn btn-primary btn-lg py-2 px-4">cuéntanos tu proyecto</button>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-6 col-sm-4 col-md-4 col-lg-4" *ngFor="let proyecto of proyectos | async | slice: 0:9" style="position: relative;">
+                    <img src="{{ proyecto.imgMiniatura }}" alt="{{ proyecto.nombre }}" width=100%>
+                    <!-- <div class="mt-2 mb-2">
+                        <h5 class="font-weight-bolder text-dark pb-0 mb-0">{{ proyecto.nombre }}</h5>
+                        <span class="font-weight-light text-muted small d-sm-inline-block mr-1" *ngFor="let categoria of proyecto.categorias; let isLast=last">{{categoria}} {{isLast ? '' : ' /  '}}</span>
+                    </div> -->
+                    <a [routerLink]="[ '/portafolio', proyecto.id]" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
