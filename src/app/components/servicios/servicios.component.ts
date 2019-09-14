@@ -32,7 +32,7 @@ export class ServiciosComponent implements OnInit {
         // tslint:disable-next-line:max-line-length
         elementos: [ 'Análisis de competencias', 'Estrategia de marca', 'Estrategia de comunicación', 'Investigación', 'Auditoria de marca', 'Arquitectura de marca', 'Lenguaje de marca', 'Personalidad y comportamiento'
         ],
-        image: 'assets/images/imageServicio.jpg'
+        image: 'assets/images/imgWeb.jpg'
       },
       {
         titulo: 'Marketing Digital',
@@ -42,7 +42,7 @@ export class ServiciosComponent implements OnInit {
         // tslint:disable-next-line:max-line-length
         elementos: [ 'Análisis de competencias', 'Estrategia de marca', 'Estrategia de comunicación', 'Investigación', 'Auditoria de marca', 'Arquitectura de marca', 'Lenguaje de marca', 'Personalidad y comportamiento'
         ],
-        image: 'assets/images/imageServicio.jpg'
+        image: 'assets/images/imgMarketingDigital.jpg'
       },
     ];
 

@@ -37,6 +37,10 @@ export class FirebaseService {
     this.afs.collection('requerimientos').add(requerimiento);
   }
 
+  saveMensaje(mensaje) {
+    return this.afs.collection('mensajes').add(mensaje);
+  }
+
 
 
 }

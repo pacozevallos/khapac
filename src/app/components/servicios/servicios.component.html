@@ -1,13 +1,14 @@
 <div>
     <div class="col-md-10 mx-auto">
         <div>
-            <div *ngFor="let servicio of servicios">
+            <div *ngFor="let servicio of servicios" class="mb-6 mb-md-8">
                 <!-- <img src="{{servicio.image}}" alt="ImageServicioKhapac" width="100%"> -->
-                <div class="w-100 v-100 imgServicio" [style.background-image]="'url('+ servicio.image +')'">
+                <div class="col-md-11 col-lg-10 v-100 imgServicio" [style.background-image]="'url('+ servicio.image +')'">
                 </div>
+
                 <div class="d-none d-md-block">
                     <div class=" d-flex align-items-center" style="margin-top: -45px">
-                        <div class="p-3" style="background-color: #9F9535">
+                        <div class="p-3 encima" style="background-color: #9F9535">
                             <span class="h1 mb-0 pr-2">{{servicio.titulo}}</span>
                             <span class="h3 mb-0 font-weight-light border-left border-dark pl-2">{{servicio.subTitulo}}</span>
                         </div>
@@ -15,14 +16,14 @@
                 </div>
 
                 <div class="d-block d-md-none d-flex align-items-center" style="margin-top: -28px">
-                    <div class="d-inline p-2" style="background-color: #9F9535">
+                    <div class="d-inline p-2 encima" style="background-color: #9F9535">
                         <span class="h4 mb-0 pr-2">{{servicio.titulo}}</span>
                         <span class="h6 mb-0 font-weight-light border-left border-dark pl-2">{{servicio.subTitulo}}</span>
                     </div>
                 </div>
 
-                <div class="col-md-8 text-muted my-3 my-md-5">
-                    <p class="lead font-weight-light">{{servicio.descripcion}}</p>
+                <div class="col-md-8 my-3 my-md-5">
+                    <p class="lead">{{servicio.descripcion}}</p>
                     <ul class="elementos">
                         <li *ngFor="let elemento of servicio.elementos">{{elemento}}</li>
                     </ul>
@@ -35,8 +36,8 @@
             <div class="col-md-4 my-3" *ngFor="let servicioAdicional of serviciosAdicionales">
                 <img src="{{servicioAdicional.image}}" width="100%" alt="imgServiciosKhapac">
                 <div class="bg-light p-4">
-                    <h3 class="font-weight-bold">{{servicioAdicional.titulo}}</h3>
-                    <p class="lead">{{servicioAdicional.subTitulo}}</p>
+                    <h4 class="font-weight-bolder">{{servicioAdicional.titulo}}</h4>
+                    <p class="lead text-muted">{{servicioAdicional.subTitulo}}</p>
                     <p>{{servicioAdicional.descripcion}}</p>
                 </div>
 

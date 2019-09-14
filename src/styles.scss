@@ -6,12 +6,14 @@ $success: #29D76F;
 $info:#1EE8E8;
 $warning: #E8D41E;
 $danger:#d9453d;
-$light: #F6F6F6;
 $dark: #545454;
+$light: rgba($dark, 0.05);
 $white: #fafafa;
+$text-muted: rgba($dark, 0.5);
 // Espacios
 $spacer: 1rem;
 $spacers: ( 0: 0, 1: ($spacer * .25), 2: ($spacer * .75), 3: ($spacer * 1.3), 4: ($spacer * 2), 5: ($spacer * 3), 6: ($spacer * 5), 7: ($spacer * 7), 8: ($spacer * 10), 9: ($spacer * 14), 10: ($spacer * 20));
+$myWidthBox: 100%;
 //Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap';
 //Angular Material
@@ -29,6 +31,10 @@ html {
 
 .mat-drawer-container {
     color: $dark !important;
+}
+
+.encima {
+    z-index: 10;
 }
 
 // Material icons
@@ -299,8 +305,11 @@ html {
     float: left;
     overflow: hidden;
     margin: 0;
-    background: $white;
+    background: $dark;
     text-align: center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
     cursor: pointer;
     @include media-breakpoint-only(xs) {
         max-width: 50%;
@@ -316,20 +325,22 @@ html {
     }
     @include media-breakpoint-only(xl) {
         width: 33.333%;
+        // width: calc(33.333% + 50px);
     }
 }
 
 .grid figure img {
     position: relative;
     display: block;
-    min-height: 100%;
+    // max-height: 100%;
+    // min-height: 100%;
     max-width: 100%;
-    opacity: 0.1;
+    opacity: 1;
 }
 
 .grid figure figcaption {
     padding: 2em;
-    color: #fff;
+    color: $white;
     // text-transform: uppercase;
     font-size: 1.25em;
     -webkit-backface-visibility: hidden;
@@ -399,7 +410,8 @@ figure.effect-lily img {
     max-width: none;
     width: -webkit-calc(100% + 50px);
     width: calc(100% + 50px);
-    opacity: 0.7;
+    // max-height: none;
+    opacity: 1;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: translate3d(-40px, 0, 0);
@@ -428,16 +440,21 @@ figure.effect-lily p {
 figure.effect-lily h2 {
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
+    opacity: 0;
 }
 
 figure.effect-lily p {
     color: rgba(255, 255, 255, 0.8);
-    opacity: 0;
     -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
     transition: opacity 0.2s, transform 0.35s;
+    opacity: 0;
 }
 
-figure.effect-lily:hover img,
+figure.effect-lily:hover img {
+    opacity: 0.5;
+}
+
+figure.effect-lily:hover h2,
 figure.effect-lily:hover p {
     opacity: 1;
 }
