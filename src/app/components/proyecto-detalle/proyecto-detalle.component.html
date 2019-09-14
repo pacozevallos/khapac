@@ -32,7 +32,7 @@
                         <span class="" *ngFor="let categoria of categorias "><i class="far fa-check-circle mr-2 "></i>{{categoria}}</span>
                     </div>
                     <div class="mt-auto">
-                        <button class="botonProyectos mb-4">Cuéntanos tu proyecto</button>
+                        <button class="botonProyectos mb-4" (click)="openRequerimientoModal()">Cuéntanos tu proyecto</button>
                     </div>
                 </div>
             </div>
@@ -65,6 +65,11 @@
                 <div class="col-md-4">
                     <div *ngIf="images?.length > 6" class="imgCover" [style.background-image]="'url('+ images[6] +')'"></div>
                 </div>
+            </div>
+
+            <div class="text-center my-7">
+                <p>¿Tienes en mente un proyecto como este?</p>
+                <button (click)="openRequerimientoModal()" class="btn btn-outline-primary px-4 py-3">Cuéntanos tu proyecto</button>
             </div>
 
 

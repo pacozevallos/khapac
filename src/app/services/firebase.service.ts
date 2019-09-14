@@ -33,6 +33,10 @@ export class FirebaseService {
     return this.proyectoObject;
   }
 
+  saveRequerimiento(requerimiento) {
+    this.afs.collection('requerimientos').add(requerimiento);
+  }
+
 
 
 }

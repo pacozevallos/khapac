@@ -70,6 +70,7 @@ import { GrupoDeGolComponent } from './components/proyectos/grupo-de-gol/grupo-d
 import { PecsaComponent } from './components/proyectos/pecsa/pecsa.component';
 import { EbisuRestobarComponent } from './components/proyectos/ebisu-restobar/ebisu-restobar.component';
 import { ToyotaTsushoComponent } from './components/proyectos/toyota-tsusho/toyota-tsusho.component';
+import { RequerimientoComponent } from './components/requerimiento/requerimiento.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +96,12 @@ import { ToyotaTsushoComponent } from './components/proyectos/toyota-tsusho/toyo
     GrupoDeGolComponent,
     PecsaComponent,
     EbisuRestobarComponent,
-    ToyotaTsushoComponent
+    ToyotaTsushoComponent,
+    RequerimientoComponent
+  ],
+  entryComponents: [
+    RequerimientoComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,

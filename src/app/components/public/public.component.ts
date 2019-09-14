@@ -24,7 +24,7 @@ export class PublicComponent implements OnInit {
       { nombre: 'portafolio', url: '/portafolio' },
       { nombre: 'enfoque', url: '/enfoque' },
       { nombre: 'servicios', url: '/servicios' },
-      { nombre: 'lab', url: '/lab' },
+      // { nombre: 'lab', url: '/lab' },
       { nombre: 'contacto', url: '/contacto' },
     ];
   }
@@ -32,7 +32,11 @@ export class PublicComponent implements OnInit {
   getRoute() {
     if (this.router.url === '/') {
      return 'navbarFloat';
+    }
   }
- }
+
+  getRouteActive(url) {
+    return this.router.url === url;
+  }
 
 }

@@ -7,6 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnfoqueComponent implements OnInit {
 
+  enfoques = [
+    {
+      titulo: 'Concepto de marca',
+      subTitulo: 'Bases firmes para construir grandes proyectos',
+      // tslint:disable-next-line:max-line-length
+      descripcion: 'Investigamos, analizamos, definimos el concepto de marca y la estrategia que nos permita alcanzar los objetivos de cada proyecto. Determinamos el target, su entorno y sus objetivos presentes y futuros.',
+      image: 'assets/images/imgConceptoMarca.jpg'
+    },
+    {
+      titulo: 'Desarrollo de marca',
+      subTitulo: 'Una idea clara y un propósito concreto',
+      // tslint:disable-next-line:max-line-length
+      descripcion: 'Desarrollamos el sistema de marca, definimos una voz única para un mensaje identitario, memorable y claro. Creamos los elementos necesarios para comunicar con claridad, personalidad y diferencia.',
+      image: 'assets/images/imgDesarrolloMarca.jpg'
+    },
+    {
+      titulo: 'Gestión de marca',
+      subTitulo: 'Conectar con tus audiencias',
+      // tslint:disable-next-line:max-line-length
+      descripcion: 'Gestionamos la experiencia de marca, creando contenido estratégico y coherente para las audiencias. Diseñamos experiencias de marca proyectando el valor dentro de soluciones enfocadas en los usuarios y el entorno.',
+      image: 'assets/images/imgGestionMarca.jpg'
+    },
+  ];
+
   constructor() { }
 
   ngOnInit() {
