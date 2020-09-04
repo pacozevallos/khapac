@@ -10,35 +10,15 @@
         <div class="carousel-inner">
             <div class="carousel-item active" *ngFor="let slide of slides; let isFirst = first" [class.active]="isFirst">
                 <!-- <img class="w-100 v-100" src="{{ slide.imagen }}" class="d-block w-100" alt="{{ slide.titulo }}"> -->
-                <div class="w-100 v-100 imagesBannerPrincipal" [style.background-image]="'url('+ slide.imagen +')'"></div>
-
-                <!-- <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12"> -->
-                <div class="container-fluid">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-md-10">
-
-                            <div class="d-none d-md-block carousel-caption text-center text-md-left text-dark py-0 w-100 mb-6" style="left: 0">
-                                <span class="">{{ slide.categoria }}</span>
-                                <h2 class="font-weight-light">{{ slide.titulo }}</h2>
-                                <button class="btn btn-outline-primary px-3 py-2">{{ slide.button }}</button>
-                            </div>
-
-                            <div class="d-block d-md-none carousel-caption text-center text-md-left text-dark py-0 w-100 px-4 mb-3" style="left: 0">
-                                <span class="">{{ slide.categoria }}</span>
-                                <h4 class="font-weight-light">{{ slide.titulo }}</h4>
-                                <button class="btn btn-outline-primary">{{ slide.button }}</button>
-                            </div>
-
+                <div class="imagesBannerPrincipal d-flex align-items-center" [style.background-image]="'url('+ slide.imagen +')'">
+                    <div class=" col-md-10 mx-auto">
+                        <div class="boxTextBanner">
+                            <p class="titulo">{{slide.titulo}}</p>
+                            <p class="subtitulo pb-3 pb-mb-4">{{slide.subtitulo}}</p>
+                            <a class="botonProyectos" [routerLink]="slide.toLink" style="text-decoration: none;">{{slide.button}}</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- </div>
-                    </div>
-                </div> -->
-
             </div>
         </div>
 
@@ -79,8 +59,8 @@
     <div class="row d-flex justify-content-center">
         <div class="col-lg-10">
             <div class="text-center d-md-flex justify-content-md-between my-5 my-lg-6">
-                <h4 class="font-weight-light op-75 d-flex align-items-center">Contruyendo marcas sólidas que trascienden en el tiempo</h4>
-                <button (click)="openRequerimientoModal()" class="btn btn-primary py-2 px-4 ">Cuéntanos tu proyecto</button>
+                <h4 class="font-weight-light op-75 d-flex align-items-center">Hoy es el momento de poner en marcha tu proyecto.</h4>
+                <button (click)="openRequerimientoModal()" class="btn btn-primary py-2 px-4 ">¡Conversémos!</button>
             </div>
             <div class="">
                 <div class="grid" *ngFor="let proyecto of proyectos | async | slice: 0:9 " style="position: relative; ">
@@ -94,7 +74,7 @@
                                 <!-- <p>Lily likes to play with crayons and pencils</p> -->
                                 <p class="font-weight-light text-white small d-sm-inline-block mr-1 " *ngFor="let categoria of proyecto.categorias; let isLast=last ">{{categoria}} {{isLast ? '' : ' / '}}</p>
                             </div>
-                            <!-- <a [routerLink]="[ '/portafolio', proyecto.id] " class="stretched-link "></a> -->
+                            <a [routerLink]="[ '/portafolio', proyecto.id] " class="stretched-link "></a>
                         </figcaption>
                     </figure>
                 </div>

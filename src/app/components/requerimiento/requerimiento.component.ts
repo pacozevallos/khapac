@@ -41,7 +41,7 @@ export class RequerimientoComponent implements OnInit {
 
     this.forma = this.fb.group({
       descripcion: [ '', [Validators.required, Validators.maxLength(1200)] ],
-      area: ['', Validators.required],
+      // area: ['', Validators.required],
       nombre: ['', Validators.required],
       celular: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.maxLength(9)] ],
       email: [ '', [Validators.required, Validators.email]],

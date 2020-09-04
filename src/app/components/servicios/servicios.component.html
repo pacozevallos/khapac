@@ -1,8 +1,9 @@
 <div>
-    <div class="col-md-10 mx-auto">
-        <div>
+    <div class="col-md-10 mx-auto py-3 py-md-5">
+
+        <p class="h2 font-weight-light text-center mb-4 mb-md-5">Soluciones puntuales bajo un servicio integral</p>
+        <!-- <div>
             <div *ngFor="let servicio of servicios" class="mb-6 mb-md-8">
-                <!-- <img src="{{servicio.image}}" alt="ImageServicioKhapac" width="100%"> -->
                 <div class="col-md-11 col-lg-10 v-100 imgServicio" [style.background-image]="'url('+ servicio.image +')'">
                 </div>
 
@@ -30,17 +31,22 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
-        <div class="row">
-            <div class="col-md-4 my-3" *ngFor="let servicioAdicional of serviciosAdicionales">
-                <img src="{{servicioAdicional.image}}" width="100%" alt="imgServiciosKhapac">
-                <div class="bg-light p-4">
-                    <h4 class="font-weight-bolder">{{servicioAdicional.titulo}}</h4>
-                    <p class="lead text-muted">{{servicioAdicional.subTitulo}}</p>
-                    <p>{{servicioAdicional.descripcion}}</p>
+
+        <div class="grillaServicios">
+            <div class="bg-light" *ngFor="let servicioAdicional of serviciosAdicionales">
+                <img class="imgServicios" [src]="servicioAdicional.image">
+                <div class="p-3 d-flex align-items-end flex-column" style="height: 300px;">
+                    <div class="w-100">
+                        <h4 class="font-weight-bolder">{{servicioAdicional.titulo}}</h4>
+                        <p class="lead text-muted">{{servicioAdicional.subTitulo}}</p>
+                        <p>{{servicioAdicional.descripcion}}</p>
+                    </div>
+                    <div class="mt-auto w-100">
+                        <button (click)="openRequerimientoModal()" class="btn btn-link px-0">Cuéntanos tu proyecto</button>
+                    </div>
                 </div>
-
             </div>
         </div>
 

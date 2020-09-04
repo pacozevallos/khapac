@@ -46,7 +46,7 @@ const routes: Routes = [
       { path: 'enfoque', component: EnfoqueComponent },
       { path: 'servicios', component: ServiciosComponent},
       { path: 'lab', component: LabComponent },
-      { path: 'contacto', component: ContactoComponent }
+      { path: 'conversemos', component: ContactoComponent }
     ]
   },
 

@@ -26,7 +26,7 @@ export class ContactoComponent implements OnInit {
       descripcion: [ '', [Validators.required, Validators.maxLength(1200)] ],
       // area: ['', Validators.required],
       nombre: ['', Validators.required],
-      // celular: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.maxLength(9)] ],
+      celular: ['', [Validators.required, Validators.pattern('[0-9]*'), Validators.maxLength(9)] ],
       email: [ '', [Validators.required, Validators.email]],
       fechaCreacion: [ firebase.firestore.FieldValue.serverTimestamp() ],
     });

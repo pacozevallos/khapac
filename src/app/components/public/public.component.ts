@@ -20,12 +20,12 @@ export class PublicComponent implements OnInit {
 
   ngOnInit() {
     this.links = [
-      { nombre: 'inicio', url: '/', option: 'exact: true' },
-      { nombre: 'portafolio', url: '/portafolio' },
-      { nombre: 'enfoque', url: '/enfoque' },
-      { nombre: 'servicios', url: '/servicios' },
+      { nombre: 'Inicio', url: '/', option: 'exact: true' },
+      { nombre: 'Portafolio', url: '/portafolio' },
+      { nombre: 'Enfoque', url: '/enfoque' },
+      { nombre: 'Servicios', url: '/servicios' },
       // { nombre: 'lab', url: '/lab' },
-      { nombre: 'contacto', url: '/contacto' },
+      { nombre: 'Conversemos', url: '/conversemos' },
     ];
   }
 
